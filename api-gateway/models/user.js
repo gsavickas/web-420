@@ -1,3 +1,11 @@
+// ============================================
+// ; Title:  API-Gateway
+// ; Author: Grayton Savickas
+// ; Date: 27 Mar 2021
+// ; Description: gateway project
+// ;===========================================
+// */
+
 // imports mongoose
 var mongoose = require('mongoose')
 
