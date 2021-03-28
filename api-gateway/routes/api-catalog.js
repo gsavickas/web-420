@@ -1,0 +1,21 @@
+// ============================================
+// ; Title:  API-Gateway
+// ; Author: Grayton Savickas
+// ; Date: 27 Mar 2021
+// ; Description: gateway project
+// ;===========================================
+// */
+
+// API Routes
+var express = require('express');
+var router = express.Router();
+
+var auth_controller = require('../controllers/authController');
+
+// POST request for user registering
+router.post('/auth/register', auth_controller.user_register);
+
+// GET request for verifying user token
+router.get('/auth/token', auth_controller.user_token);
+
+module.exports = router;
