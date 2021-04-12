@@ -23,6 +23,7 @@ exports.user_register = function(req, res){
     User.add(newUser, (err, user) => {
         if (err)
             return res.status(500).send("There was a problem registering the user.");
+            
         var token = jwt.sign({ id: user._id}, config.web.secret, {
             expiresIn: 86400 // 24 hrs
         });
