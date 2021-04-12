@@ -16,5 +16,17 @@ var userSchema = new mongoose.Schema({
     email: String
 });
 
+// user.save is for adding a new user in the database
+module.exports.add = (user, callback) => {
+    user.save(callback);
+};
+
+// function to GET a user by their id
+module.exports.getById = (id, callback) => {
+    var query = {_id: id};
+    User.findById(query, callback);
+};
+
+
 // Exports our user schema
 module.exports = mongoose.model('User', userSchema);
