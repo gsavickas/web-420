@@ -18,4 +18,10 @@ router.post('/auth/register', auth_controller.user_register);
 // GET request for verifying user token
 router.get('/auth/token', auth_controller.user_token);
 
+// POST allows users login requests
+router.post('/auth/login', auth_controller.user_login);
+
+// GET allows user to logout via request
+router.get('/auth/logout', auth_controller.user_logout);
+
 module.exports = router;
